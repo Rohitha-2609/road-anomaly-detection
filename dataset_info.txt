@@ -1,0 +1,98 @@
+🔹 Original Dataset Structure (Kaggle)
+
+Dataset Source:
+🔗 https://www.kaggle.com/datasets/atulyakumar98/pothole-detection-dataset
+
+The dataset is organized into two classes for binary classification:
+
+potholedata/
+│
+├── normal/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   ├── image3.jpg
+│   └── ...
+│
+└── potholes/
+    ├── image1.jpg
+    ├── image2.jpg
+    ├── image3.jpg
+    └── ...
+📌 Description
+
+normal/ → Road images without potholes
+
+potholes/ → Road images containing potholes
+
+The dataset is used for binary image classification
+
+No bounding box annotations are provided
+
+Images are real-world road scenes
+
+🧠 YOLOv8 Classification Dataset Structure
+
+For training using YOLOv8 Classification, the dataset must follow this structure:
+
+pothole_yolo/
+│
+├── train/
+│   ├── normal/
+│   └── potholes/
+│
+├── val/
+│   ├── normal/
+│   └── potholes/
+│
+└── test/   (optional)
+    ├── normal/
+    └── potholes/
+📌 Explanation
+
+The dataset is split into:
+
+80% Training
+
+20% Validation
+
+Folder name = Class label
+
+YOLO automatically assigns:
+
+Class 0 → normal
+
+Class 1 → potholes
+
+No label (.txt) files are required for classification
+
+📊 Dataset Preprocessing
+
+Before training:
+
+Images resized to 224 × 224
+
+Pixel normalization (0–1 scaling)
+
+Random shuffling
+
+Train–Validation split (80:20)
+
+These steps improve generalization and model performance.
+
+⚙️ YOLOv8 Classification Configuration
+
+Model Used: YOLOv8n-cls
+
+Training Configuration:
+
+Input Size: 224×224
+
+Batch Size: 16
+
+Epochs: 10–20
+
+Optimizer: Adam
+
+Loss Function: Cross-Entropy Loss
+
+Transfer Learning: Pretrained ImageNet weights

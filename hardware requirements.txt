@@ -1,0 +1,83 @@
+Training Environment
+
+Platform: Google Colab
+
+Framework: Ultralytics YOLOv8
+
+Deep Learning Library: PyTorch
+
+Model: YOLOv8n-cls (Nano – Lightweight)
+
+Image Size: 224 × 224
+
+Batch Size: 16
+
+Epochs: 10–20
+
+Optimizer: Adam
+
+Loss Function: Cross-Entropy Loss
+
+Transfer Learning: Pretrained ImageNet weights
+
+Hardware (Colab Runtime):
+
+GPU: NVIDIA T4 (when available)
+
+RAM: 12GB
+
+Storage: Cloud-based
+
+Cloud-based GPU training enabled faster convergence and efficient experimentation.
+
+🔹 Deployment Target
+
+Device: Raspberry Pi 4
+
+RAM: 4GB
+
+Operating System: Raspberry Pi OS
+
+Inference Engine: ONNX Runtime
+
+Camera: USB Webcam (for real-time detection)
+
+Programming Language: Python 3
+
+Computer Vision Library: OpenCV
+
+🔹 Model Optimization Strategy
+
+Lightweight YOLOv8 Nano architecture
+
+Reduced parameter count (~1.4M parameters)
+
+Low memory footprint
+
+Fast inference speed
+
+ONNX export for platform independence
+
+CPU-based inference optimized for edge devices
+
+📦 Exported Files
+
+yolo.pt → Trained PyTorch model
+
+yolo.onnx → Optimized model for Raspberry Pi deployment
+
+🎯 Purpose of the System
+
+Real-time pothole detection and road condition classification for:
+
+Smart transportation systems
+
+Intelligent mobility solutions
+
+Municipal road monitoring
+
+Autonomous vehicle safety
+
+Fleet management systems
+
+The system enables lightweight edge-based inference, ensuring minimal latency and low power consumption while maintaining high classification accuracy.
